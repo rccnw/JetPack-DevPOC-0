@@ -1,0 +1,42 @@
+JetPack-DevPOC-0
+
+
+
+
+Reference:
+
+'Azure Service Bus'
+https://www.lynda.com/Azure-tutorials/Azure-Service-Bus/786409-2.html
+
+
+
+1. Create Azure resource group:     'JetPack-DevPOC-0'  CREW.DEV.TEST   West US 2
+
+2.  Create Service Bus Namespace
+
+        Name:           JetPack-DevPOC-0.servicebus.windows.net
+        Pricing Tier:   Basic
+        Subscription:   CREW.DEV.TEST
+        Resource Group: JetPack-DevPOC-0
+
+3.  Navigate to this service bus namespace.
+    Select 'Shared Access Policies' under Settings
+    Select Policy 'RootManagerSharedAccessKey'
+    Copy 'Primary Connection String'
+
+    Endpoint=sb://jetpack-devpoc-0.servicebus.windows.net/;SharedAccessKeyName=RootManageSharedAccessKey;SharedAccessKey=xGtrXODqlYBXSd2L4anz72XXW99KroL/xVWuhOPSIzs=
+
+    Dismiss blade
+
+4.  Create a Queue
+    Select 'Overview' tab
+    Select '+ Queue' button
+    name:   'queue1'
+    Create
+
+5.  Create .Net Core console app
+
+    Install-Package Microsoft.Azure.ServiceBus
+
+
+
