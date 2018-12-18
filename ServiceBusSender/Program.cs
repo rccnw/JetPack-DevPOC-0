@@ -13,7 +13,7 @@ namespace ServiceBusSender
 
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            MainAsync().GetAwaiter().GetResult();
         }
 
         static async Task MainAsync()
